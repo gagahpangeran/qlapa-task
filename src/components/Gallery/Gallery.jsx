@@ -23,7 +23,6 @@ export default class Gallery extends Component {
   }
 
   render() {
-    const { images } = this.props;
     return (
       <div className="gallery">
         <div class="gallery__left-button" />

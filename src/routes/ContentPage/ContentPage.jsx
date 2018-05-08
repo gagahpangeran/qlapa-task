@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import "./ContentPage.style.css";
+import { product } from "../../assets";
 import assets from "../../assets";
-import { banner } from "../../assets";
 import { Banner, Gallery } from "../../components";
 
 export default class ContentPage extends Component {
@@ -14,8 +14,8 @@ export default class ContentPage extends Component {
   render() {
     return (
       <div class="content-page">
-        <Banner background={banner.background} />
-        <Gallery images={assets} />
+        <Banner background={assets.banner} />
+        <Gallery images={product} />
       </div>
     );
   }
