@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Route, Switch, Router } from 'react-router';
-import ReactGA from 'react-ga';
-import createBrowserHistory from 'history/createBrowserHistory';
-import ContentPage from './ContentPage/ContentPage'
+import React, { Component } from "react";
+import { Route, Switch, Router } from "react-router";
+import ReactGA from "react-ga";
+import createBrowserHistory from "history/createBrowserHistory";
+import ContentPage from "./ContentPage/ContentPage";
 
 const ROUTES = [
   {
-    title: 'App',
-    id: 'app',
+    title: "App",
+    id: "app",
     route: {
       exact: true,
-      path: '/',
+      path: "/",
       component: ContentPage
     }
   }

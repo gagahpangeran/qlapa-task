@@ -23,10 +23,7 @@
     "reset-css": "^3.0.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "src/**/*.{js,jsx,json,css}": ["prettier --single-quote --write", "git add"]
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -37,8 +34,10 @@
     "start:js": "react-scripts start",
     "build:js": "react-scripts build",
     "test:js": "react-scripts test --env=jsdom",
-    "build:css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --parallel",
-    "watch:css": "npm run build:css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "build:css":
+      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --parallel",
+    "watch:css":
+      "npm run build:css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
     "node-sass-chokidar": "^1.1.0",
