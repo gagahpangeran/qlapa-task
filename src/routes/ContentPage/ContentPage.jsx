@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import "./ContentPage.style.css";
 import assets from "../../assets";
+import { Gallery } from "../../components"
 
 export default class ContentPage extends Component {
   static propTypes = {};
@@ -10,6 +11,6 @@ export default class ContentPage extends Component {
   static defaultProps = {};
 
   render() {
-    return null;
+    return <Gallery images={assets} />;
   }
 }

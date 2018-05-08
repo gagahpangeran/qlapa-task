@@ -1,0 +1,13 @@
+.gallery {
+    width: 100%;
+    overflow: scroll;
+    height: 500px;
+    &__content {
+        display: flex;
+        flex-flow: row wrap;
+        height: 100%;
+        .photo {
+            
+        }
+    }
+}
