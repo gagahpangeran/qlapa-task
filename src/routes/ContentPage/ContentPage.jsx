@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 
 import "./ContentPage.style.css";
 import assets from "../../assets";
-import { Gallery } from "../../components"
+import { banner } from "../../assets";
+import { Banner, Gallery } from "../../components";
 
 export default class ContentPage extends Component {
   static propTypes = {};
@@ -11,6 +12,11 @@ export default class ContentPage extends Component {
   static defaultProps = {};
 
   render() {
-    return <Gallery images={assets} />;
+    return (
+      <div class="content-page">
+        <Banner background={banner.background} />
+        <Gallery images={assets} />
+      </div>
+    );
   }
 }
