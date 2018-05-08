@@ -10,6 +10,7 @@ import product09 from "./product09.jpg";
 import product10 from "./product10.jpg";
 import product11 from "./product11.jpg";
 import product12 from "./product12.jpg";
+import background from "./banner.jpg";
 
 export default [
   product01,
@@ -25,3 +26,5 @@ export default [
   product11,
   product12
 ];
+
+export const banner = { background }
