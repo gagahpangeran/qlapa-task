@@ -1,0 +1,17 @@
+.photo {
+  box-shadow: 2px 2px 5px rgba(236, 184, 184, 0.5);
+
+  img {
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+
+  &:hover {
+    background-color: #000;
+
+    img {
+      opacity: 0.8;
+    }
+  }
+}
