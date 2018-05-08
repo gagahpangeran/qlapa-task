@@ -11,6 +11,11 @@ export default class Gallery extends Component {
 
   static defaultProps = {};
 
+  constructor(props) {
+    super(props);
+    this.state = { pos: 0 };
+  }
+
   renderPhoto(param) {
     const { images } = this.props;
     let arr = [];
@@ -22,17 +27,33 @@ export default class Gallery extends Component {
     return arr;
   }
 
+  galeryMove(direction) {
+    this.setState({
+      pos:
+        direction === "left"
+          ? this.state.pos === 0 ? -820 : this.state.pos + 205
+          : this.state.pos === -820 ? 0 : this.state.pos - 205
+    });
+  }
+
   render() {
+    let position = this.state.pos + "px";
     return (
       <div className="gallery">
-        <div class="gallery__left-button" />
+        <button
+          class="gallery__left-button"
+          onClick={() => this.galeryMove("left")}
+        />
         <div className="gallery__content">
-          <div class="gallery__content__wrap">
+          <div className="gallery__content__wrap" style={{ left: position }}>
             <div className="row">{this.renderPhoto(1)}</div>
             <div className="row">{this.renderPhoto(2)}</div>
           </div>
         </div>
-        <div class="gallery__right-button" />
+        <button
+          class="gallery__right-button"
+          onClick={() => this.galeryMove("right")}
+        />
       </div>
     );
   }
