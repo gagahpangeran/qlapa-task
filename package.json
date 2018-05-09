@@ -2,6 +2,7 @@
   "name": "qlapa-task",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gagahpangeran.github.io/qlapa-task/",
   "dependencies": {
     "history": "^4.7.2",
     "husky": "^0.14.3",
@@ -37,7 +38,9 @@
     "build:css":
       "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --parallel",
     "watch:css":
-      "npm run build:css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+      "npm run build:css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "node-sass-chokidar": "^1.1.0",
