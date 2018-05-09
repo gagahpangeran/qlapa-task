@@ -76,4 +76,46 @@
       }
     }
   }
+
+  @media screen and (max-width: 760px) {
+    width: 100%;
+
+    &__left-button,
+    &__right-button {
+      display: none;
+    }
+
+    &__content {
+      width: 100%;
+      overflow: scroll;
+      margin: 0;
+      height: 170px;
+
+      &__wrap {
+        flex-direction: row;
+
+        .row {
+          height: 150px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    &__content {
+      height: 140px;
+      .row {
+        height: 120px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1500px) {
+    &__content {
+      .row {
+        height: 240px;
+      }
+    }
+  }
 }

@@ -13,8 +13,8 @@ export default class Banner extends Component {
   render() {
     return (
       <div className="banner">
-        <a href="#">
-          <img src={this.props.background} />
+        <a href="banner">
+          <img src={this.props.background} alt="Banner" />
         </a>
       </div>
     );

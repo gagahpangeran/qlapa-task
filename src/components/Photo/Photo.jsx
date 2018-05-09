@@ -13,8 +13,8 @@ export default class Photo extends Component {
   render() {
     return (
       <div className="photo">
-        <a href="#">
-          <img src={this.props.image} />
+        <a href="product">
+          <img src={this.props.image} alt="Product" />
         </a>
       </div>
     );
