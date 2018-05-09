@@ -38,6 +38,17 @@ export default class Gallery extends Component {
     });
   }
 
+  componentDidMount() {
+    this.interval =
+      window.innerWidth <= 750
+        ? null
+        : setInterval(() => this.galleryMove("right"), 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
     let position = this.state.pos + "px";
     return (
