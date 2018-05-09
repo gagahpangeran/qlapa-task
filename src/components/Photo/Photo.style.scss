@@ -3,6 +3,7 @@
 	margin: 0 12px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   transition: .2s;
+  overflow: hidden;
   
   img {
     width: auto;
@@ -15,6 +16,7 @@
 
     img {
       opacity: 0.8;
+      transform: scale(1.2);
     }
   }
 }

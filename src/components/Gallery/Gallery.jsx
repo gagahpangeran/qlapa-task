@@ -42,7 +42,7 @@ export default class Gallery extends Component {
     this.interval =
       window.innerWidth <= 750
         ? null
-        : setInterval(() => this.galleryMove("right"), 2000);
+        : setInterval(() => this.galleryMove("right"), 3000);
   }
 
   componentWillUnmount() {
