@@ -13,6 +13,7 @@ export default class Gallery extends Component {
 
   constructor(props) {
     super(props);
+    this.galleryContent = React.createRef();
     this.state = { pos: 0 };
   }
 
@@ -27,12 +28,13 @@ export default class Gallery extends Component {
     return arr;
   }
 
-  galeryMove(direction) {
+  galleryMove(direction) {
+    let movement = this.galleryContent.current.offsetWidth / 6;
     this.setState({
       pos:
         direction === "left"
-          ? this.state.pos === 0 ? -820 : this.state.pos + 205
-          : this.state.pos === -820 ? 0 : this.state.pos - 205
+          ? this.state.pos === 0 ? -(movement * 4) : this.state.pos + movement
+          : this.state.pos === -(movement * 4) ? 0 : this.state.pos - movement
     });
   }
 
@@ -42,17 +44,21 @@ export default class Gallery extends Component {
       <div className="gallery">
         <button
           class="gallery__left-button"
-          onClick={() => this.galeryMove("left")}
+          onClick={() => this.galleryMove("left")}
         />
         <div className="gallery__content">
-          <div className="gallery__content__wrap" style={{ left: position }}>
+          <div
+            className="gallery__content__wrap"
+            style={{ left: position }}
+            ref={this.galleryContent}
+          >
             <div className="row">{this.renderPhoto(1)}</div>
             <div className="row">{this.renderPhoto(2)}</div>
           </div>
         </div>
         <button
           class="gallery__right-button"
-          onClick={() => this.galeryMove("right")}
+          onClick={() => this.galleryMove("right")}
         />
       </div>
     );

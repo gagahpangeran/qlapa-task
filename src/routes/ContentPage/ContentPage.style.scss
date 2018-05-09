@@ -1,7 +1,21 @@
 .content-page {
-	width: 1170px;
-	margin: 40px auto;
-	display: flex;
-	flex-direction: row;
-	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  width: 1170px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  @media screen and (max-width: 1200px) {
+    width: 750px;
+  }
+
+  @media screen and (max-width: 760px) {
+	width: 90%;
+	margin: 20px auto;
+	flex-direction: column;
+  }
+
+  @media screen and (min-width: 1500px) {
+	  width: 1470px;
+  }
 }
