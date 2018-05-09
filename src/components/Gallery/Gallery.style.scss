@@ -47,7 +47,7 @@
     overflow: hidden;
     position: relative;
     margin: 0 20px;
-    height: calc(100% + 18px);
+    height: 100%;
 
     &__wrap {
       display: flex;
@@ -55,6 +55,7 @@
       position: absolute;
       top: 0;
       align-content: space-around;
+      transition: 0.2s;
 
       .row {
         display: flex;
@@ -63,6 +64,14 @@
 
         &:first-child {
           margin-bottom: 22px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          height: 110px;
+
+          &:first-child {
+            margin-bottom: 15px;
+          }
         }
       }
     }
